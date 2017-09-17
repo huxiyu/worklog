@@ -1,0 +1,124 @@
+.header {
+    background: #00a0d8;
+    height: 86px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-line {
+    width: 980px;
+    height: 28px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 28px;
+}
+
+.title-line .tit {
+    width: 120px;
+    height: 47px;
+    margin: 0 auto;
+    display: block;
+    font-size: 32px;
+    background: #fff;
+    text-align: center;
+}
+
+.login-box {
+    position: relative;
+    width: 980px;
+    height: 325px;
+    margin: 0 auto;
+    /*background:orangered;*/
+}
+
+.login-box .login-left {
+    float: left;
+    width:480px;
+    height:367px;
+    /*background: orangered;*/
+}
+
+.login-box .login-left .login-left-img {
+    width:400px;
+    height:300px;
+    margin-top:30px;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+.login-box .login-right {
+    float: right;
+    width:410px;
+    height:322px;
+    margin-top: 60px;
+    padding-right: 35px;
+    /*background: greenyellow;*/
+}
+
+.login-box .line {
+    float: left;
+    border-right: 1px solid #ddd;
+    height: 300px;
+    margin: 0 auto 0 50%;
+    position: absolute;
+    top: 28px;
+}
+
+.form-login {
+    position: relative;
+}
+
+.form-login .input-box {
+    padding-top: 20px;
+    /*background:red;*/
+}
+
+.status-box {
+    position: relative;
+    height:66px;
+
+}
+
+.form-login .input-box .item input {
+    width: 388px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #aaa;
+    font-size: 14px;
+    padding: 10px;
+    height: 18px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+.form-login .input-box .btn-box .btn {
+    color: #555;
+    display: inline-block;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 184px;
+    /*line-height: 38px;*/
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.form-login .input-box .btn-box .btn-login {
+    border: 1px solid #0381aa;
+    color: #fff;
+    background-color: #00a7de;
+}
+
+.form-login .input-box .btn-box .btn-login:hover {
+    background: #00bee7;
+}
+
+.form-login .input-box .btn-box .btn-reg {
+    margin-left: 34px;
+}
+
+.form-login .input-box .btn-box .btn-reg:hover {
+    background: #f7f7f7;
+}

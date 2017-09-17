@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+
+    <!-- 引入element-ui css -->
+    <!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">-->
+    <link rel="stylesheet" href="/libs/element-ui/theme-default/index.css">
+    <!-- 先引入 Vue -->
+    <!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+    <script src="/libs/vue/vue.js"></script>
+    <!-- 引入element-ui js -->
+    <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+    <script src="/libs/element-ui/index.js"></script>
+
+    <!--common css-->
+    <link rel="stylesheet" href="/css/common.css">
+    <!--login css-->
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+<div class="header"></div>
+<div class="title-line">
+    <span class="tit">登录</span>
+</div>
+
+<div class="login-box">
+    <div class="login-left">
+        <div class="login-left-img" style="background-image: url({{cdn}}/images/bureaudribbble.gif);"></div>
+    </div>
+    <div class="line"></div>
+    <div id="app" class="login-right">
+        <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" class="form-login">
+            <div class="input-box">
+                <ul>
+                    <li class="item username status-box">
+                        <el-form-item  prop="account">
+                            <input type="text" v-model="ruleForm2.account" placeholder="账号" id="login-username" maxlength="50" autocomplete="off" >
+                        </el-form-item>
+                    </li>
+                    <li class="item password status-box">
+                        <el-form-item  prop="checkPass">
+                            <input type="password" v-model="ruleForm2.checkPass" placeholder="密码" id="login-passwd" >
+                        </el-form-item>
+                    </li>
+
+                    <li class="btn-box">
+                        <el-button class="btn btn-login" @click.native.prevent="handleSubmit" :loading="logining">登录</el-button>
+                        <el-button class="btn btn-reg">注册</el-button>
+                    </li>
+                </ul>
+            </div>
+        </el-form>
+    </div>
+</div>
+</body>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                logining: false,
+                ruleForm2: {
+                    account: '',
+                    checkPass: ''
+                },
+                rules2: {
+                    account: [
+                        { required: true, message: '请输入账号', trigger: 'blur' },
+                    ],
+                    checkPass: [
+                        { required: true, message: '请输入密码', trigger: 'blur' },
+                    ]
+                },
+            }
+        },
+        methods: {
+            handleSubmit(ev) {
+                var _this = this
+                this.$refs.ruleForm2.validate((valid) => {
+                    if (valid) {
+
+                    } else {
+                        return false
+                    }
+                })
+            }
+        }
+    })
+</script>
+</html>
