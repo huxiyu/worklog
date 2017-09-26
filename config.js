@@ -8,7 +8,7 @@ const config = {
 
     // 数据库配置
     database: {
-        DATABASE: 'koa_demo',
+        DATABASE: 'worklog',
         USERNAME: 'root',
         PASSWORD: '123456',
         PORT: '3306',
